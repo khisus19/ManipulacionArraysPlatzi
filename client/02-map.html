@@ -10,7 +10,6 @@
     <div>
         <ul id="app"></ul>
     </div>
-    <input type="checkbox" checked>
     <script>
       const tasks = [
         {
@@ -37,14 +36,10 @@
       
       const app = document.getElementById('app');
 
-      tasks.forEach(task => {
-        app.innerHTML += `
-        <li> 
-          Nombre: ${task.title} //  
-          Descripción: ${task.descp} - 
-          <input type="checkbox" ${task.done ? 'checked' : ''}/>
-        </li>`
+      const mapeado = tasks.map(task => {
+          return `<li>${task.title} - ${task.descp}`
       });
+      app.innerHTML = mapeado.join('');
     </script>
 </body>
 </html>
