@@ -1,4 +1,4 @@
-// .flat() method
+// .FLAT() METHOD
 
 const matrix = [
     [1, 2, 3],
